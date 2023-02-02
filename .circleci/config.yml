@@ -10,8 +10,8 @@ defaultdocker: &default
         - image: circleci/node:13.8.0
 
 jobs:
-    testing_when_on_fail
-        *default
+    testing_when_on_fail:
+        <<: *default
         steps:
             - run: return 1
             - run:
