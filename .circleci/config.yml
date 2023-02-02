@@ -11,7 +11,7 @@ defaultdocker: &default
 
 jobs:
     testing_when_on_fail
-        <<: *default
+        *default
         steps:
             - run: return 1
             - run:
