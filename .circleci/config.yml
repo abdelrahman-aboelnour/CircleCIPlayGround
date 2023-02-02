@@ -17,8 +17,11 @@ jobs:
             - run:
                 command: echo 'Failure happend !'
                 when: on_fail
-        
-    
+             
+workflows:
+    test:
+        jobs:
+            - testing_when_on_fail
 
 
 
