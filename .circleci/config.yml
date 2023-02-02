@@ -13,7 +13,7 @@ jobs:
             name: "print to file save hello world"
             command: echo "Hello World" > output.txt
         - persist_to_workspace:
-            root: /
+            root: ~/
             paths:
                 - output.txt
             
@@ -22,7 +22,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
         - attach_workspace:
-            at: /
+            at: ~/
         - run:
             name: "read from file"
             command: cat output.txt
