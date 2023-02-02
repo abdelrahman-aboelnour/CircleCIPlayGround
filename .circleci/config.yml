@@ -11,7 +11,7 @@ jobs:
     steps:
         - run:
             name: "print to file save hello world"
-            command: echo "Hello World" > output.txt
+            command: echo "Hello World" > ~/output.txt
         - persist_to_workspace:
             root: ~/
             paths:
@@ -25,7 +25,7 @@ jobs:
             at: ~/
         - run:
             name: "read from file"
-            command: cat output.txt
+            command: cat ~/output.txt
 
 
     
