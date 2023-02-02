@@ -5,12 +5,12 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 
-default: &default
+defaultdocker: &default
     docker:
         - image: circleci/node:13.8.0
 
 jobs:
-    *default
+    <<: *default
     steps:
         - run: return 1
         - run:
